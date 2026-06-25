@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+bool cmp(string a, string b) {
+    return a.length() < b.length();
+}
+
+int main() {
+    int n;
+
+    cout << "Enter number of words: ";
+    cin >> n;
+
+    string words[n];
+
+    cout << "Enter words:\n";
+    for (int i = 0; i < n; i++)
+        cin >> words[i];
+
+    sort(words, words + n, cmp);
+
+    cout << "Sorted by length:\n";
+    for (int i = 0; i < n; i++)
+        cout << words[i] << endl;
+
+    return 0;
+}

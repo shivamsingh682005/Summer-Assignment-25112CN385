@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter number of names: ";
+    cin >> n;
+
+    string name[n];
+
+    cout << "Enter names:\n";
+    for (int i = 0; i < n; i++)
+        cin >> name[i];
+
+    sort(name, name + n);
+
+    cout << "Sorted names:\n";
+    for (int i = 0; i < n; i++)
+        cout << name[i] << endl;
+
+    return 0;
+}
